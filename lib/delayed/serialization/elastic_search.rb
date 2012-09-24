@@ -1,7 +1,6 @@
 # encoding: utf-8
 require 'delayed_job'
 require 'tire'
-require './lib/delayed/backend/elastic_search'
 
 module Tire::Model::Persistence
   class<<self
