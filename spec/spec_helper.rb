@@ -18,4 +18,3 @@ class Story
 
   handle_asynchronously :whatever
 end
-Story.index.delete and Story.create_elasticsearch_index
