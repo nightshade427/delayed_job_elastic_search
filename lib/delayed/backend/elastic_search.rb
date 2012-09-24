@@ -50,7 +50,6 @@ module Delayed
         
         def self.delete_all
           index.delete and create_elasticsearch_index
-          sleep 0.1
         end
         
         def self.create!(attributes, object=create(attributes))
