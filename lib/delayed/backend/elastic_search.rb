@@ -107,7 +107,7 @@ module Delayed
         end
         
         def self.unpersisted_performable?(args)
-          args.first.is_a?(Hash) && args.first[:payload_object].is_a?(PerformableMethod) && !args.first[:payload_object].object.persisted?
+          args.first.is_a?(Hash) && args.first[:payload_object].is_a?(PerformableMethod) && args.first[:payload_object].object.respond_to?(:persisted?) && !args.first[:payload_object].object.persisted?
         end
       end
     end
